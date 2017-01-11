@@ -12,7 +12,7 @@ function setup(saving) {
         }
     };
 
-    return shallow(<CourseForm {...props} />)
+    return shallow(<CourseForm {...props} />);
 }
 describe('CourseForm via Enzyme', () => {
     it('renders form and h1', () => {
@@ -23,11 +23,11 @@ describe('CourseForm via Enzyme', () => {
 
     it('save button is labeled "Save" when not saving', () => {
         const wrapper = setup(false);
-        expect(wrapper.find('input').props().value).toBe('Save')
+        expect(wrapper.find('input').props().value).toBe('Save');
     });
 
     it('save button is labeled "Saving" when saving', () => {
         const wrapper = setup(true);
-        expect(wrapper.find('input').props().value).toBe('Saving...')
+        expect(wrapper.find('input').props().value).toBe('Saving...');
     });
 });
